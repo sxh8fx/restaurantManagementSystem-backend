@@ -46,7 +46,7 @@ public class AuthTokenFilter extends OncePerRequestFilter {
                 SecurityContextHolder.getContext().setAuthentication(authentication);
                 System.out.println("DEBUG: AuthTokenFilter - Successfully authenticated user: " + username);
             } else {
-                System.out.println("DEBUG: AuthTokenFilter - Token invalid or null. JWT: " + jwt);
+                // Token invalid or null - failing silently for public endpoints
             }
         } catch (Exception e) {
             System.out.println("DEBUG: Authentication failed: " + e.getMessage());
@@ -63,7 +63,7 @@ public class AuthTokenFilter extends OncePerRequestFilter {
         if (StringUtils.hasText(headerAuth) && headerAuth.startsWith("Bearer ")) {
             return headerAuth.substring(7);
         } else {
-            System.out.println("DEBUG: AuthTokenFilter - No Bearer token found. Header: " + headerAuth);
+            // No Bearer token found - this is normal for public endpoints
         }
 
         return null;

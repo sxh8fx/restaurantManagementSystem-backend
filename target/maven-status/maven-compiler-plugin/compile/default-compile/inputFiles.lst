@@ -14,6 +14,7 @@ D:\Resteraut_Reservation\backend\src\main\java\com\restaurant\backend\payload\re
 D:\Resteraut_Reservation\backend\src\main\java\com\restaurant\backend\service\MenuService.java
 D:\Resteraut_Reservation\backend\src\main\java\com\restaurant\backend\config\DataMigration.java
 D:\Resteraut_Reservation\backend\src\main\java\com\restaurant\backend\repository\TimeSlotRepository.java
+D:\Resteraut_Reservation\backend\src\main\java\com\restaurant\backend\controller\HealthController.java
 D:\Resteraut_Reservation\backend\src\main\java\com\restaurant\backend\payload\request\SignupRequest.java
 D:\Resteraut_Reservation\backend\src\main\java\com\restaurant\backend\repository\TableRepository.java
 D:\Resteraut_Reservation\backend\src\main\java\com\restaurant\backend\payload\response\JwtResponse.java

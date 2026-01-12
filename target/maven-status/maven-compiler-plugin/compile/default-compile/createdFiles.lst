@@ -1,6 +1,7 @@
 com\restaurant\backend\controller\ReservationController$ReservationRequest.class
 com\restaurant\backend\config\DataMigration.class
 com\restaurant\backend\controller\TableController.class
+com\restaurant\backend\controller\HealthController.class
 com\restaurant\backend\security\services\UserDetailsImpl.class
 com\restaurant\backend\security\WebSecurityConfig.class
 com\restaurant\backend\repository\OrderItemRepository.class
