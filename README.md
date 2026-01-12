@@ -9,6 +9,9 @@ This is the backend server for **The Overlook Restaurant**, a smart dining manag
 - **Real-time:** Spring WebSocket (STOMP)
 - **Build Tool:** Maven
 
+## 🔗 Related Repositories
+- **Frontend:** [restaurantManagementSystem-frontend](https://github.com/sxh8fx/restaurantManagementSystem-frontend)
+
 ## 🚀 Getting Started
 
 ### Prerequisites
