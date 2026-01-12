@@ -59,9 +59,17 @@ public class WebSecurityConfig {
                 .exceptionHandling(exception -> exception.authenticationEntryPoint(unauthorizedHandler))
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/auth/**").permitAll()
-                        .requestMatchers("/api/test/**").permitAll()
-                        .requestMatchers("/", "/health", "/error").permitAll() // Allow health checks and error page
+                        .requestMatchers(
+                                "/",
+                                "/health",
+                                "/error",
+                                "/api/auth/**",
+                                "/actuator/**",
+                                "/swagger-ui/**",
+                                "/v3/api-docs/**",
+                                "/ws/**",
+                                "/ws-restaurant/**")
+                        .permitAll()
                         .requestMatchers("/api/test/**").permitAll()
                         .requestMatchers(org.springframework.http.HttpMethod.GET, "/api/menu/**").permitAll()
                         .requestMatchers(org.springframework.http.HttpMethod.POST, "/api/menu/**").hasRole("ADMIN")
@@ -71,7 +79,6 @@ public class WebSecurityConfig {
                         .requestMatchers(org.springframework.http.HttpMethod.GET, "/api/reservations/slots/**")
                         .permitAll()
                         .requestMatchers(org.springframework.http.HttpMethod.OPTIONS, "/**").permitAll()
-                        .requestMatchers("/ws-restaurant/**").permitAll()
                         .anyRequest().authenticated());
 
         http.authenticationProvider(authenticationProvider());
