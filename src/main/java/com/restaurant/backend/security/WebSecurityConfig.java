@@ -61,6 +61,8 @@ public class WebSecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/api/auth/**").permitAll()
                         .requestMatchers("/api/test/**").permitAll()
+                        .requestMatchers("/", "/health").permitAll() // Allow health checks
+                        .requestMatchers("/api/test/**").permitAll()
                         .requestMatchers(org.springframework.http.HttpMethod.GET, "/api/menu/**").permitAll()
                         .requestMatchers(org.springframework.http.HttpMethod.POST, "/api/menu/**").hasRole("ADMIN")
                         .requestMatchers(org.springframework.http.HttpMethod.PUT, "/api/menu/**").hasRole("ADMIN")
