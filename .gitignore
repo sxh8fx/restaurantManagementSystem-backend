@@ -25,3 +25,4 @@ build_output*.txt
 run*.log
 *_error.txt
 *.log
+.env
